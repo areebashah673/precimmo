@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>Contact Card</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f9f9f9;
+      display: flex;
+      justify-content: center;
+      padding: 40px;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+      width: 360px;
+      padding: 20px 30px;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      border-bottom: 1px solid #eee;
+      padding: 15px 0;
+    }
+
+    .contact-item:last-child {
+      border-bottom: none;
+    }
+
+    .contact-icon {
+      font-size: 20px;
+      width: 30px;
+      color: #666;
+    }
+
+    .contact-text {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .label {
+      font-size: 12px;
+      color: #888;
+    }
+
+    .value {
+      font-size: 15px;
+      color: #111;
+      font-weight: 500;
+    }
+
+    .add-contact {
+      margin-top: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #f1f1f1;
+      border-radius: 8px;
+      padding: 12px;
+      font-size: 15px;
+      font-weight: 500;
+      color: #111;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .add-contact:hover {
+      background-color: #e0e0e0;
+    }
+
+    .add-contact-icon {
+      margin-right: 8px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <div class="contact-item">
+      <div class="contact-icon">
+        <i class="fa-solid fa-phone"></i>
+      </div>
+      <div class="contact-text">
+        <span class="label">Phone</span>
+        <span class="value">0 7596 888 921</span>
+      </div>
+    </div>
+
+    <div class="contact-item">
+      <div class="contact-icon">
+        <i class="fa-solid fa-envelope"></i>
+      </div>
+      <div class="contact-text">
+        <span class="label">Email</span>
+        <span class="value">malik@homeimprovementltd.co.uk</span>
+      </div>
+    </div>
+
+    <div class="contact-item">
+          <div class="contact-icon">
+            <i class="fa-solid fa-globe"></i></div>
+      <div class="contact-text">
+        <span class="label">Website</span>
+        <span class="value">homeimprovementltd.co.uk</span>
+      </div>
+    </div>
+
+    <div class="contact-item">
+      <div class="contact-icon"><i class="fa-solid fa-briefcase"></i></div>
+      <div class="contact-text">
+        <span class="label">Home Improvement</span>
+        <span class="value">Energy Consultant</span>
+      </div>
+    </div>
+
+    <div class="add-contact">
+      <span class="add-contact-icon"><i class="fa-regular fa-user"></i></span> Add Contact
+    </div>
+  </div>
+
+</body>
+</html>

@@ -769,6 +769,13 @@ body{
   /* background-color: red; */
 
 }
+.animated-cards{
+  flex-direction: column;
+align-items: center;
+}
+.animated-cards .flip-card{
+  width:calc(100% /1);
+}
 .image{
   padding:0px !important;
 }
@@ -810,6 +817,9 @@ body{
   body{
     /* background-color: green; */
   }
+.animated-cards .flip-card{
+    flex-direction: column;
+  }
   .step:nth-last-child(3)::after {
     display: none;
   }
@@ -832,8 +842,45 @@ body{
 /* Tablets (portrait) */
 @media (min-width: 768px) and (max-width: 1024px) {
 body{
-  background-color: yellow;
+  /* background-color: yellow; */
 }
+
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 22px;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.hamburger span {
+  display: block;
+  height: 4px;
+  background: #333;
+  border-radius: 2px;
+  transition: 0.3s;
+}
+.nav-links {
+  display: none;
+}
+
+.nav-links.active {
+  display: flex;
+  flex-direction: column;
+  background: white;
+  position: absolute;
+  top: 104px;
+  right: 0;
+  align-items: start;
+  width: 200px;
+  padding: 10px;
+}
+
+
+
+
 .step:nth-last-child(2)::after {
   display: none;
 }
@@ -883,7 +930,7 @@ body{
   background-color: #EB368D;
 }
 .colored p{
-  color: #fff;
+  color: #fff !important;
 }
 .div-btn{
   display: flex;
@@ -911,7 +958,6 @@ body{
   align-items: center;
   border: 1px solid #EB368D;
 width: calc(100% /2);
-/* padding: 22px; */
 margin-left: 25px;
 border-radius: 35px;}.Therapy{
   display: flex;
@@ -929,4 +975,63 @@ justify-content: space-between;
 }
 .line p{
   color: #fff;
+}/* ----flip transition ----*/
+ .card-container img{
+  width: 75px;
+}
+ .flip-head h5{
+  color: #EB378B;
+}
+.animated-cards .flip-card:nth-of-type(2) .flip-card-back .flip-head h5 {
+  color: #fff;
+}
+
+
+.flip-head p{
+  color: #747282;
+  font-size: 12px;
+}.flip:nth-child(2) img{
+  width: 75px;
+
+} 
+.flip-card {
+  background-color: transparent;
+  width: calc(100% / 3);
+  height: 300px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+
+
+.flip-card-back {
+  transform: rotateY(180deg);}
+
+ .flip-card-back .card-container {
+  width: 100%;
+}
+
+.animated-cards{
+  display: flex;
+  justify-content: space-between;
+  gap: 23px;
+
 }

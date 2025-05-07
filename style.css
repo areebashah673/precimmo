@@ -25,7 +25,7 @@ color: #fff !important;
 }
   .mt-5{
   
-  margin-top: 170px;
+  margin-top: 120px;
   
   }
   .r{
@@ -110,7 +110,7 @@ color: #fff !important;
   width: calc(100% / 2);
 }  
 .banner h1{
-  font-size: 48px;
+  font-size: 40px;
 }
 .contact-btn{
 color:#EB378B;
@@ -219,12 +219,77 @@ align-items: center;
 
 /* Aura section */
 
-.aura .container{
+/* .aura .container{
   display: flex;
   justify-content: center;
   flex-direction: inherit;
   gap:17px;
   flex-wrap: wrap;
+} */
+
+
+.flipcard-img img{
+  width: 200px;
+}
+.flipcard {
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  perspective: 1000px;
+}
+
+.flipcard-inner {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.flipcard:hover .flipcard-inner {
+  transform: rotateY(180deg);
+}
+.animated-card{
+  display: flex;
+  justify-content: space-around;
+}
+.flipcard-front {
+  position: absolute;
+  width: 300px ;
+  height: 300px;
+  top: 20px;
+  bottom: 0px;
+  right: 17px;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+.flipcard-back{
+  position: absolute;
+  width:auto;
+  width: 300px ;  -webkit-backface-visibility: hidden;
+  height: 300px;
+  top: 9px;
+  bottom: 0px;
+  transform: rotateY(180deg);
+
+  right: 17px;
+  backface-visibility: hidden;
+}
+
+.back{
+  width: 300px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 43px;
+}
+
+.flip-bottom{
+  background-color: #EB378B;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
 }
 .card{
   border-radius: 40px;
@@ -237,14 +302,14 @@ align-items: center;
   flex: 1;
   text-align: center;
   border: 1px solid #EB378B;
-  border-radius: 45px;
-  /* width: 65%; */
+  border-radius: 45px;}
+  /* width: 65%; *
 
-}
-.image-section2{
+
+/* .image-section2{
   display: flex;
   justify-content: center;
-}
+} */
 
 .image-section img {
   max-width: 100%;
@@ -252,9 +317,28 @@ align-items: center;
   border-radius: 45px;
 }
 
-.aura h4{
+/* .aura 3h4{
   color: #EB378B;
+} */
+
+.aura-tag{
+  background-color: #EB378B;
+  display: flex;
+  justify-content: space-between;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
 }
+.aura-tag img{
+  object-fit: contain;
+}.flip-card-back{
+  background-color: #FFF5F8;
+border-radius: 25px;
+}
+
+.aura-flex{
+  display: flex;
+}
+
 .wrapper{
  background-color: #FFF5F8; 
 }
@@ -458,8 +542,10 @@ h1{
     justify-content: center;
   }
 .card-container{
-  width: calc(100% / 3 - -100px);
+  width: calc(100% /1);
+
 }
+
     .top-content{
       margin-top: 55px;
     }
@@ -598,11 +684,16 @@ margin-top: 201px;
 /*------------------- Page Aura -C  ---------------*/
 
 .main2{
-  background:url(assets/Aura-c/curvicalimg.png)center no-repeat;
+  background:url(assets/Aura-c/curvicalimg.png)center no-repeat, url(assets//home-page/backgroung.png) center no-repeat;
+padding-top: 0px;
   height: auto;
+
+}
+.main2 p{
+  margin-bottom:3px;
 }
 .hero-banner{
-  margin-bottom: 77px;
+  margin-bottom: 477px;
 }
 .invasive-box,
 .game-chaner,
@@ -806,10 +897,15 @@ align-items: center;
 
 .target{
   width: 100%;
+  margin-left: 0px;
 }
 .Therapy .target{
   width: auto;
 }
+.help-card .card-container:nth-child(2) img{
+  width: 69px;
+}
+
 }
 
 /* Mobile (landscape) and small tablets */
@@ -925,7 +1021,7 @@ body{
 
 
 
-/* Personalized page */
+/* ----------------Personalized page------------- */
 .colored{
   background-color: #EB368D;
 }
@@ -958,10 +1054,12 @@ body{
   align-items: center;
   border: 1px solid #EB368D;
 width: calc(100% /2);
-margin-left: 25px;
-border-radius: 35px;}.Therapy{
+/* margin-left: 25px; */
+border-radius: 35px;}
+.Therapy{
   display: flex;
-justify-content: space-between;
+gap: 26px;
+  justify-content: space-between;
 
 }
 .line{

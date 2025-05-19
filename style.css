@@ -46,6 +46,10 @@ margin-bottom: 0%;
 }.mb-5{
   margin-bottom: 100px;
 }
+.pb-5
+{
+  padding-bottom: 100px;
+}
   .mt-5{
   margin-top: 120px;
 }
@@ -66,7 +70,7 @@ margin-bottom: 0%;
     border-radius: 15px;
     max-width: 1200px;
     position: relative;
-    z-index: 1;
+    z-index: 2;
 
     margin: 20px auto; 
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
@@ -95,7 +99,7 @@ margin-bottom: 0%;
     transition: color 0.3s;
   }
   .nav-links li a:hover {
-    color: #ff5a5f; 
+    color: var(--text-color) 
   }
   a{
     text-decoration: none;
@@ -114,6 +118,61 @@ margin-bottom: 0%;
   .contact-btn button:hover {
     background: #343a40;
   }
+/* Dropdown base */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 217%;
+  left: 0;
+  background: #ffffff;
+  padding: 10px 0;
+  border-radius: 8px;
+  min-width: 160px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  opacity: 0;
+  visibility: hidden;
+  /* transform: translateY(10px); */
+  transition: all 0.3s ease;
+  z-index: 1;
+}
+.arrow {
+  font-size: 12px;
+  margin-left: 5px;
+  transition: transform 0.3s ease;
+  display: inline-block;
+}
+
+/* Rotate arrow when hovering */
+.dropdown:hover .arrow {
+  transform: rotate(180deg);
+}
+
+.dropdown:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+
+}
+
+.dropdown-menu li {
+  list-style: none;
+}
+
+.dropdown-menu li a {
+  display: block;
+  padding: 10px 20px;
+  color: #333;
+  font-size: 14px;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+
+.dropdown-menu li a:hover {
+  background-color: #f7f7f7;
+  color: var(--text-color);
+}
 
 
   /* hero banner */
@@ -123,15 +182,51 @@ margin-bottom: 0%;
     height:824px;
     /* margin-top: 55px; */
     padding-top: 29px;
-    background:url(assets/home-page/virus.png)center no-repeat, url(assets/home-page/backgroung.png);
+    background: url(assets/home-page/backgroung.png);
     background-repeat: no-repeat;
    object-fit: contain;
     width: 100%;
     background-size: cover;
  position: absolute;
- top: 0px;
-    
+ top: 0px;   
+}
+.main4 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.virus-img {
+  width:85%; /* or whatever width fits your design */
+  position: absolute;
+  top: 17%;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: virusPop 3s ease-in-out infinite;
+  opacity: 0.95;
+}
+
+
+
+@keyframes virusPop {
+  0%, 100% {
+    transform: translateX(-50%) scale(1);
+    opacity: 0.95;
   }
+  50% {
+    transform: translateX(-50%) scale(1.05);
+    opacity: 1;
+  }
+}
+.hero-banner p{
+  position: relative;
+  z-index: 2;
+}
   .hero{
     display: flex;
 margin-top: 8%;  
@@ -140,7 +235,12 @@ margin-top: 8%;
   color:#fff;
   width: calc(100% / 2);
 }  
-.banner h1,
+
+.banner h1{
+      font-size: 48px;
+    z-index:2;
+    position: relative;
+}
 .title h1{
   font-size: 48px;
 }
@@ -158,6 +258,8 @@ text-decoration: none;
   border-radius: 16px;
   box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.1);
   padding: 30px 25px;
+  position: relative;
+  z-index: 2;
   
 }
 .hero-banner{
@@ -433,6 +535,8 @@ border: none;
 }.zoom {
   transition: transform .2s; /* Animation */
   margin: 0 auto;
+  display: flex;
+  align-items: end;
 }
 
 .zoom:hover {
@@ -444,6 +548,7 @@ border: none;
 }
 .dis{
   margin-top: 12% !important;
+  padding-top: 6%;
 }
 .image-section2{
       display: flex;
@@ -700,7 +805,11 @@ padding-top: 0%;
       padding: 10px;
     }
 .form-container{
-  width: 300px;
+  width: 294px;
+}
+.btn-submit{
+      padding: 9px 106px;
+
 }
 .Therapy{
   flex-direction: column;
@@ -899,13 +1008,23 @@ background-color: #C737EB;
   text-align: center;
   color: var(--text-color);
 }
-
+.step-title{
+  font-size: 20px !important;
+}
 
 /* game changer section */
 .row{
   display: flex;
   /* justify-content: space-between; */
 }
+
+
+
+.ESMO{
+  position: relative;
+}
+
+
 .col3{
   display: flex;
   justify-content: start;
@@ -1009,7 +1128,10 @@ padding: 25px;
     background-color: var(--text-color);
     border-radius: 25px;
     color: #fff;
-    padding: 9px;
+    padding: 12px;position: absolute;
+    top: 95%;
+    left: 45%;
+    font-weight: 400;
   }
   /* what You Recieve */
   .Recieve h3{
@@ -1029,7 +1151,17 @@ padding: 25px;
 body{
   /* background-color: red; */
 
-} .onco2{
+}.hero-banner{
+  padding-right: 0%;
+}
+.virus-img
+
+ {
+    width: 160%;
+    position: absolute;
+    top: 17%;
+    left: 55%;}
+.onco2{
  width: calc(100% /1) !important;
 } .onco2 img{
   width: 100%;
@@ -1251,6 +1383,11 @@ display: none;
  body{
   /* background-color: blue; */
  }
+ .virus-img {
+    width: 91%;
+    position: absolute;
+    top: 22%;
+    left: 50%;}
  .step:nth-last-child(2)::after {
   display: none;
 }
@@ -1269,11 +1406,20 @@ display: none;
     
     width: 78%;
 
+  }.sec-image{
+    width: 92%;
   }
 
   .chart-body::before{
       left: 265px !important;
 }
+.zoom img{
+  width: 98%;
+}
+.Transforming{
+  margin-top: 58%;
+}
+
 }
 
 
@@ -1486,16 +1632,20 @@ gap: 26px;
 
 .chart-description h3 {
   text-align: center;
-  font-size: 15px;
+  font-size: 29px;
   font-weight: 400 !important;
   margin-top: 10px;
   color: #555;
   line-height: 1.6;
 }
-
-.chart-description strong {
-  font-weight: bold;
+.receive-card p{
+font-size: 18px;
+font-weight: 100;
+line-height: 1.4;
 }
+/* .chart-description strong {
+  font-weight: bold;
+} */
 
 .cta-button {
   display: block;

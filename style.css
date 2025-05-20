@@ -14,6 +14,7 @@
 :root{
   --background-color: #FFF5F8;
   --text-color: #EB378B;
+  --font-family:'inter','sans-sarif';
 }
 .aura-font{
     font-family: 'Harabara Mais', 'sans-serif';
@@ -1643,11 +1644,17 @@ font-size: 18px;
 font-weight: 100;
 line-height: 1.4;
 }
+.chart-card{
+  padding-bottom: 7%;
+  position: relative;
+  
+}
 /* .chart-description strong {
   font-weight: bold;
 } */
 
 .cta-button {
+
   display: block;
   margin: 30px auto 0;
   background: #e54287;
@@ -1656,8 +1663,11 @@ line-height: 1.4;
   border-radius: 30px;
   text-decoration: none;
   font-weight: 500;
-  width: max-content;
+  width: max-content;    position: absolute;
+    top: 95%;
+    left: 40%;
 }
+
 
 .chart-body {
   position: relative;

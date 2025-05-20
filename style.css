@@ -113,7 +113,7 @@ margin-bottom: 0%;
     padding: 12px 11px;
     border-radius: 8px;
     cursor: pointer;
-    font-size: 13px;
+    font-size: 16px;
       transition: background 0.3s;
   }
 
@@ -398,10 +398,10 @@ align-items: center;
   transform-style: preserve-3d;
   /* box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); */
 }
-.flip-heading h1{
-
+.flip-heading h3{
     font-family: 'Harabara Mais';
     font-weight: 100;
+    margin-top: 23px;
 
 }
 .flip-heading p{

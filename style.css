@@ -1212,7 +1212,13 @@ align-items: center;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
+}.care-journey button {
+    top: 96% !important;
+    border: none !important;
+    left: 33% !important;
+    font-size: 16px !important;
+    font-weight: 200 !important;
+    margin-top: 39px !important; }
 .steps{
   justify-content: center;
   gap: 26px;
@@ -1294,7 +1300,7 @@ align-items: center;
 /* Tablets (portrait) */
 @media (min-width: 768px) and (max-width: 1024px) {
 body{
-  /* background-color: yellow; */
+  background-color: yellow;
 }
 .immuno-oncology{
   width: calc(100% /1) !important;
@@ -1365,7 +1371,13 @@ display: none;
 
   align-items: center;
 }
-
+.care-journey button {
+    top: 96% !important;
+    border: none !important;
+    left: 33% !important;
+    font-size: 16px !important;
+    font-weight: 200 !important;
+    margin-top: 39px !important; }
 .target{
   width: 100%;
 }
@@ -1375,6 +1387,7 @@ display: none;
   .chart-body::before{
      left: 197px !important;
 }
+
 
 
 }

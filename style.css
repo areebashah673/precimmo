@@ -402,6 +402,7 @@ align-items: center;
     font-family: 'Harabara Mais';
     font-weight: 100;
     margin-top: 23px;
+    color: var(--footer-color);
 
 }
 .flip-heading p{

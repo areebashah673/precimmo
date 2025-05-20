@@ -1269,7 +1269,7 @@ align-items: center;
 /* Mobile (landscape) and small tablets */
 @media (min-width: 481px) and (max-width: 767px) {
   body{
-    /* background-color: green; */
+    background-color: green;
   }
  .Transforming{
     margin-top: 134%;

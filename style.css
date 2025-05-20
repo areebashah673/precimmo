@@ -1440,7 +1440,7 @@ display: none;
   justify-content: center;
  
 }.butn{
-  padding: 12px;
+  padding: 18px;
   border-radius: 28px;
   background-color:var(--text-color);
   color: #fff;
@@ -1465,10 +1465,20 @@ width: calc(100% /2);
 /* margin-left: 25px; */
 border-radius: 35px;}
 .Therapy{
-  display: flex;
+display: flex;
 gap: 26px;
-  justify-content: space-between;
+justify-content: space-between;
+padding-bottom: 8%;
 
+}
+
+.next{
+  margin-top: 52%;
+}
+.person-image{
+  height: 90%;
+  /* justify-content: ; */
+justify-content: end;
 }
 .line{
   background-color: #EB368D;
@@ -1496,6 +1506,7 @@ gap: 26px;
 .flip-head p{
   color: #747282;
   font-size: 12px;
+      line-height: 1.5;
 }.flip:nth-child(2) img{
   width: 75px;
 
@@ -1584,7 +1595,16 @@ gap: 26px;
   padding: 15px 0;
   gap: 26px;
 }
-
+.care-journey{
+  position: relative;
+}
+.care-journey button{
+  top: 91%;
+  border: none;
+  left: 42%;
+  font-size: 24px;
+  font-weight: 200;
+}
 .bar-row p {
   font-weight: 400;
 }
@@ -1664,7 +1684,7 @@ line-height: 1.4;
   text-decoration: none;
   font-weight: 500;
   width: max-content;    position: absolute;
-    top: 95%;
+    top: 93%;
     left: 40%;
 }
 

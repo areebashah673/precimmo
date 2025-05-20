@@ -15,6 +15,7 @@
   --background-color: #FFF5F8;
   --text-color: #EB378B;
   --font-family:'inter','sans-sarif';
+  --footer-color:#1F2229;
 }
 .aura-font{
     font-family: 'Harabara Mais', 'sans-serif';
@@ -72,7 +73,6 @@ margin-bottom: 0%;
     max-width: 1200px;
     position: relative;
     z-index: 2;
-
     margin: 20px auto; 
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   }
@@ -107,7 +107,7 @@ margin-bottom: 0%;
     color:#fff;
   }
   .contact-btn button {
-    background: #212529;
+    background:var(--footer-color);
     color: #ffffff;
     border: none;
     padding: 10px 20px;
@@ -116,9 +116,7 @@ margin-bottom: 0%;
     font-size: 16px;
     transition: background 0.3s;
   }
-  .contact-btn button:hover {
-    background: #343a40;
-  }
+
 /* Dropdown base */
 .dropdown {
   position: relative;
@@ -203,12 +201,12 @@ margin-bottom: 0%;
 }
 
 .virus-img {
-  width:85%; /* or whatever width fits your design */
+  width:85%; 
   position: absolute;
   top: 17%;
   left: 50%;
   transform: translateX(-50%);
-  animation: virusPop 3s ease-in-out infinite;
+  animation: virusPop 8s ease-in-out infinite;
   opacity: 0.95;
 }
 
@@ -273,7 +271,7 @@ text-decoration: none;
   font-weight: 700;
   text-align: center;
   margin-bottom: 20px;
-  color: #1e1e1e;
+  color:var(--footer-color);
 }
 
 form {
@@ -291,9 +289,9 @@ form {
 .form-row select,
 .form-row textarea {
   flex: 1;
-  padding: 10px 12px;
+  padding: 12px 12px;
   border: 1px solid #ccc;
-  border-radius: 6px;
+  border-radius: 2px;
   font-size: 14px;
   outline: none;
   width: calc(100% / 2);
@@ -308,12 +306,12 @@ textarea {
 }
 
 .btn-submit {
-  background-color: #01272f;
+  background-color: var(--footer-color);
   color: white;
   font-size: 16px;
   padding: 12px 109px;
   border: none;
-  border-radius: 8px;
+  border-radius: 2px;
   margin-top: 10px;
   cursor: pointer;
   width: -webkit-fill-available;
@@ -322,7 +320,7 @@ textarea {
 }
 
 .btn-submit:hover {
-  background-color: #034050;
+  background-color: var(--text-color)
 }
 
 /* content */
@@ -643,6 +641,7 @@ padding-top: 0%;
    /* footer section */
    .footer-section{
     background-color: #01272f;
+    padding-top: 5%;
   }
 
   .footer-container {
@@ -1300,7 +1299,7 @@ align-items: center;
 /* Tablets (portrait) */
 @media (min-width: 768px) and (max-width: 1024px) {
 body{
-  background-color: yellow;
+  /* background-color: yellow; */
 }
 .immuno-oncology{
   width: calc(100% /1) !important;
@@ -1529,7 +1528,10 @@ justify-content: end;
   width: calc(100% / 3);
   height: 300px;
 }
-
+.group img{
+  width: 330px;
+ margin-left: -18px;
+}
 .flip-card-inner {
   position: relative;
   width: 100%;

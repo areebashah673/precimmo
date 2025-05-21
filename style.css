@@ -728,7 +728,7 @@ padding-top: 0%;
     margin-top: 30px;
     color: #aaa;
     font-size: 14px;
-    border-top: 1px solid #35383E;
+    border-top: 1 solid #35383E;
     padding-top: 15px;
   }
   /* footer end */
@@ -1016,6 +1016,8 @@ background-color: #C737EB;
 }
 .step-title{
   font-size: 20px !important;
+    font-size: 17px !important;
+    font-weight: 700;
 }
 
 /* game changer section */
@@ -1090,7 +1092,6 @@ padding: 25px;
   0% { width: 0; }
   100% { width: 96%; }
 }
-
 @keyframes load2 {
   0% { width: 0; }
   100% { width: 89%; }
@@ -1099,11 +1100,33 @@ padding: 25px;
   0% { width: 0; }
   100% { width: 87%; }
 }
-
 @keyframes load4 {
   0% { width: 0; }
   100% { width: 95%; }
 }
+@keyframes load5 {
+  0% { width: 0; }
+  100% { width: 84%; }
+}@keyframes load6 {
+  0% { width: 0; }
+  100% { width: 91%; }
+}
+
+.fill {
+  height: 20px;
+  width: 0;
+  background: #EB378B;
+  box-shadow: 0 10px 40px -10px #EB378B;
+  transition: width 0.3s ease-in-out;
+}
+
+.fill.load1.animate { animation: load1 2s forwards; }
+.fill.load2.animate { animation: load2 2s forwards; }
+.fill.load3.animate { animation: load3 2s forwards; }
+.fill.load4.animate { animation: load4 2s forwards; }
+.fill.load5.animate { animation: load4 2s forwards; }
+.fill.load6.animate { animation: load4 2s forwards; }
+
 .accuracy .bar-group {
   display: flex;
   align-items: center;

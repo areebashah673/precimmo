@@ -30,3 +30,30 @@
       observer.observe(accuracySection);
     }
   });
+
+
+  // tooltip
+
+
+      document.addEventListener("DOMContentLoaded", function () {
+      const tooltip = document.createElement("div");
+      tooltip.className = "tooltip";
+      document.body.appendChild(tooltip);
+
+      document.querySelectorAll("[data-tooltip]").forEach(elem => {
+        elem.addEventListener("mouseenter", function () {
+          tooltip.textContent = this.dataset.tooltip;
+          tooltip.style.display = "block";
+        });
+
+        elem.addEventListener("mousemove", function (e) {
+          tooltip.style.left = e.pageX + 10 + "px";
+          tooltip.style.top = e.pageY + 10 + "px";
+        });
+
+        elem.addEventListener("mouseleave", function () {
+          tooltip.style.display = "none";
+        });
+      });
+    });
+  

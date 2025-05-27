@@ -322,11 +322,20 @@ guidelines to personalize treatment recommendations.</p>
 
 
     <!-- Impact on oncology -->
+  <!-- Impact on oncology -->
     <Section class="Transforming trans mt-5">
       <div class="container transform">
         <div class="col-5 content1">
-          <div class="image-section img">
-            <img src="assets/personalized/impact.png" alt="">
+          <div class="image-section">
+           <img  src="assets/personalized/spring.png" alt="">
+            <div class="pulse1">
+    <img class="pulse-element" data-tooltip="Metabolomics" src="assets/personalized/Layer_1.png" alt="">
+    <img class="pulse-element" data-tooltip="Genomics " src="assets/personalized/Group 40369.png" alt="">
+    <img class="pulse-element" data-tooltip="Epigenomics" src="assets/personalized/Group 40370.png" alt="">
+    <img class="pulse-element" data-tooltip="Proteomics" src="assets/personalized/Group 40371.png" alt="">
+    <img class="pulse-element" data-tooltip="Electronic Health Records" src="assets/personalized/Group 40373.png" alt="">
+  </div>
+            
           </div>
         </div>
         <div class="col-5 top-content">
@@ -349,6 +358,7 @@ guidelines to personalize treatment recommendations.</p>
     </Section>
 
 
+
     <!-- therapy-section -->
     <div class="wrapper">
       <section class="therapy-section">
@@ -367,8 +377,9 @@ guidelines to personalize treatment recommendations.</p>
 
           </div>
           <div class="target">
+            <div class="guide">
             <div class="image">
-              <img src="assets/personalized/criteria.png" alt="">
+              <img src="assets/personalized/criteria.png" alt=""></div>
             </div>
             <div class="line">
               <p>Guides oncologists in selecting optimal treatment strategies, including targeted chemotherapy,
@@ -442,6 +453,29 @@ guidelines to personalize treatment recommendations.</p>
         navLinks.classList.toggle("active");
       });
     </script>
+ <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const tooltip = document.createElement("div");
+      tooltip.className = "tooltip";
+      document.body.appendChild(tooltip);
+
+      document.querySelectorAll("[data-tooltip]").forEach(elem => {
+        elem.addEventListener("mouseenter", function () {
+          tooltip.textContent = this.dataset.tooltip;
+          tooltip.style.display = "block";
+        });
+
+        elem.addEventListener("mousemove", function (e) {
+          tooltip.style.left = e.pageX + 10 + "px";
+          tooltip.style.top = e.pageY + 10 + "px";
+        });
+
+        elem.addEventListener("mouseleave", function () {
+          tooltip.style.display = "none";
+        });
+      });
+    });
+  </script>
 </body>
 
 </html>
